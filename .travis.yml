@@ -2,6 +2,7 @@ language: python
 python:
   - "2.7"
 install:
+  - export BOTO_CONFIG=/dev/null
   - pip install gsutil
 script:
   - gsutil cp gs://genomics-public-data/NA12878.chr20.sample.bam .
